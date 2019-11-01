@@ -1,10 +1,7 @@
 import axios from 'axios'
-// import Vue from '../../main'
 
-const isProduction = process.env.NODE_ENV === 'production'
-const baseURL = isProduction
-  ? 'https://api.YOURDOMAIN/'
-  : 'http://127.0.0.1:3000/'
+// const isProduction = process.env.NODE_ENV === 'production'
+const baseURL = 'http://comento.cafe24.com'
 
 const instance = axios.create({
   baseURL,

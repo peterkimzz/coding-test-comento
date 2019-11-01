@@ -1,21 +1,15 @@
 <template>
-  <div class="home">
-    <img 
-      alt="Vue logo" 
-      :src="require('src/assets/imgs/logo.png')">
-    <h1>Vuejs Boilerplate</h1>
+  <div id="home__page">
+    <h1 class="mb-5">Comento Coding Test :: Donghyun Kim</h1>
+    <vue-posts/>
   </div>
 </template>
 
 <script>
+import VuePosts from '@/components/heads/Posts'
 export default {
-  name: 'home'
+  components: {
+    VuePosts
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-img {
-  background-color: $oc-gray-1;
-  padding: 30px;
-}
-</style>

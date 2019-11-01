@@ -6,6 +6,7 @@ function resolveSrc(_path) {
 }
 
 module.exports = {
+  transpileDependencies: ['vue-clamp', 'resize-detector'],
   configureWebpack: {
     resolve: {
       alias: {
@@ -22,21 +23,16 @@ module.exports = {
     sourceMap: process.env.NODE_ENV !== 'production',
     loaderOptions: {
       // },
-      sass: {
-        data: `
-          @import "@/assets/scss/global/_variables.scss";
-          @import "node_modules/open-color/open-color.scss";
-        `
+      less: {
+        globalVars: {
+          '--border-radius-default': '2px',
+          '--color-text-primary': '#333',
+          '--color-primary': '#00c854',
+          '--color-gray-3': '#dee2e6',
+          '--color-black': '#000',
+          '--color-white': '#fff'
+        }
       }
     }
-  },
-  // chainWebpack: config => {
-  //   config.module
-  //     .rule('i18n')
-  //     .resourceQuery(/blockType=i18n/)
-  //     .type('javascript/auto')
-  //     .use('i18n')
-  //     .loader('@kazupon/vue-i18n-loader')
-  //     .end()
-  // }
+  }
 }

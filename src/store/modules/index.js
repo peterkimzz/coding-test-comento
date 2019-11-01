@@ -1,5 +1,5 @@
-import auth from './auth'
+import comento from './comento'
 
 export default {
-  auth
+  comento
 }
